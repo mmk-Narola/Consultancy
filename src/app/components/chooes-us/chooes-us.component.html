@@ -1,0 +1,31 @@
+<div class="container-fluid py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h1 class="display-5 mb-0">Why Choose Us!!!</h1>
+        <hr class="w-25 mx-auto bg-primary">
+    </div>
+    <div class="row g-5">
+        <div class="col-lg-4">
+            <ng-container *ngFor="let item of servcies">
+                <app-chooes-us-box [data]="item"></app-chooes-us-box>
+            </ng-container>
+        </div>
+        <div class="col-lg-4">
+            <ng-container *ngFor="let item of serviceTwo">
+                <app-chooes-us-box [data]="item"></app-chooes-us-box>
+            </ng-container>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="d-block bg-primary h-100 text-center">
+                <img class="img-fluid" src="../../../assets/images/feature.jpg" alt="">
+                <div class="p-4">
+                    <p class="text-white mb-4">Clita nonumy sanctus nonumy et clita tempor, et sea amet ut et
+                        sadipscing rebum amet takimata amet, sed accusam eos eos dolores dolore et. Et ea ea dolor
+                        rebum invidunt clita eos. Sea accusam stet stet ipsum, sit ipsum et ipsum kasd</p>
+                    <a href="" class="btn btn-light py-md-3 px-md-5 rounded-pill mb-2">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

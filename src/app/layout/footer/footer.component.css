@@ -1,0 +1,17 @@
+.bg-secondary {
+  background-color: #f6f6f6 !important;
+}
+
+.bg-primary {
+  background-color: #f3525a !important;
+}
+
+.text-primary {
+  color: #f3525a !important;
+}
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: #152440;
+  /* background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important; */
+}

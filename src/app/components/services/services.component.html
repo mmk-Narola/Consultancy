@@ -1,0 +1,15 @@
+<!-- Services Start -->
+<div class="container-fluid pt-5 px-3">
+    <div class="text-center mx-auto mb-4" style="max-width: 600px;">
+        <h1 class="display-5 mb-0">What We Offer</h1>
+        <hr class="w-25 mx-auto bg-primary">
+    </div>
+    <div class="row g-5">
+        <ng-container *ngFor="let item of servcies">
+            <div class="col-lg-4 col-md-6">
+                <app-service-box [serviseArray]="item"></app-service-box>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<!-- Services End -->
