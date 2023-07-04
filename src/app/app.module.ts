@@ -21,6 +21,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TeamMemberComponent } from './components/team-member/team-member.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 
 
@@ -46,6 +48,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ContactComponent,
     ServiceComponent,
     DashboardComponent,
+    TeamMemberComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserAnimationsModule,
