@@ -1,5 +1,6 @@
 import { DOCUMENT, ViewportScroller } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Observable, fromEvent, map } from 'rxjs';
 
 @Component({
@@ -10,9 +11,16 @@ import { Observable, fromEvent, map } from 'rxjs';
 export class AppComponent implements OnInit {
   title = 'InvestmentPort';
 
-  constructor() {}
+  constructor(private spinner: NgxSpinnerService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.spinner.show();
+
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 1000);
+  }
 
   private readonly document = inject(DOCUMENT);
   private readonly viewport = inject(ViewportScroller);
