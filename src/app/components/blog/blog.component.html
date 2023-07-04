@@ -16,7 +16,12 @@
         <!-- Blog list Start -->
         <div class="col-lg-8">
             <div class="row g-5">
-                <div class="col-xl-6 col-lg-12 col-md-6">
+                <ng-container *ngFor="let item of blogList">
+                    <div class="col-xl-6 col-lg-12 col-md-6">
+                        <app-latestblog-box [data]="item"></app-latestblog-box>
+                    </div>
+                </ng-container>
+                <!-- <div class="col-xl-6 col-lg-12 col-md-6">
                     <div class="blog-item">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="../../../assets/images/blog-1.jpg" alt="">
@@ -109,7 +114,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- Blog list End -->

@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ScrollComponent } from './components/scroll/scroll.component';
@@ -23,9 +23,8 @@ import { ServiceComponent } from './pages/service/service.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TeamMemberComponent } from './components/team-member/team-member.component';
 import { BlogComponent } from './components/blog/blog.component';
-
-
-
+import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -55,11 +54,16 @@ import { BlogComponent } from './components/blog/blog.component';
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
+    NgbCarouselModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-
-
-}
+export class AppModule {}
